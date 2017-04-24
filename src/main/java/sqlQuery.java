@@ -24,7 +24,11 @@ public class sqlQuery {
                         resultSet.getDouble("price"),
                         resultSet.getInt("on_stock"),
                         resultSet.getInt("id"));
-                System.out.println();}
+                System.out.println();
+             resultSet.close();
+             statement.close();
+             connection.close();
+            }
             }catch(SQLException ex){
                 ex.printStackTrace();
             } catch(Exception e){
